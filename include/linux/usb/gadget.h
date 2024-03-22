@@ -289,6 +289,11 @@ struct usb_ep_caps {
 		.dir_out = !!(_dir & USB_EP_CAPS_DIR_OUT), \
 	}
 
+enum ep_type {
+	EP_TYPE_NORMAL = 0,
+	EP_TYPE_GSI,
+};
+
 /**
  * struct usb_ep - device side representation of USB endpoint
  * @name:identifier for the endpoint, such as "ep-a" or "ep9in-bulk"

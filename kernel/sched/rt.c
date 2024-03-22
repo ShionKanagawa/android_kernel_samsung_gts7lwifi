@@ -1553,6 +1553,8 @@ select_task_rq_rt(struct task_struct *p, int cpu, int sd_flag, int flags,
 		    p->prio < cpu_rq(target)->rt.highest_prio.curr))
 			cpu = target;
 	}
+
+out_unlock:
 	rcu_read_unlock();
 
 out:

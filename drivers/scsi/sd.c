@@ -3220,6 +3220,7 @@ static int sd_revalidate_disk(struct gendisk *disk)
 	else
 		rw_max = min_not_zero(logical_to_sectors(sdp, dev_max),
 				      (sector_t)BLK_DEF_MAX_SECTORS);
+	}
 
 	/* IOPP-max_sectors-v1.0.4.14 */
 	rw_max = max(rw_max, (unsigned int)BLK_DEF_MAX_SECTORS);
